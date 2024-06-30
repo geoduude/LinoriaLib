@@ -3544,7 +3544,7 @@ function Library:CreateWindow(...)
 
                     Cursor.Color = Library.AccentColor;
 
-                    Cursor.PointA = Vector2.new(mPos.X, mPos.Y);
+                    Cursor.PointA = Vector2.new(mPos.X + 2, mPos.Y + 2);
                     Cursor.PointB = Vector2.new(mPos.X + 14, mPos.Y + 4);
                     Cursor.PointC = Vector2.new(mPos.X + 4, mPos.Y + 14);
 
