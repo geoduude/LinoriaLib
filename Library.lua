@@ -3525,9 +3525,10 @@ function Library:CreateWindow(...)
                 -- TODO: add cursor fade?
                 local State = InputService.MouseIconEnabled;
 
+                -- thx wave for having a shitty drawing lib :)
                 local Cursor = Drawing.new('Triangle');
-                Cursor.Thickness = 1;
-                Cursor.Filled = true;
+                Cursor.Thickness = 2;
+                Cursor.Color = Color3.new(1, 1, 1);
                 Cursor.Visible = true;
 
                 local CursorOutline = Drawing.new('Triangle');
