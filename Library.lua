@@ -3527,7 +3527,7 @@ function Library:CreateWindow(...)
 
                 -- thx wave for having a shitty drawing lib :)
                 local Cursor = Drawing.new('Triangle');
-                Cursor.Thickness = 2;
+                Cursor.Thickness = 5;
                 Cursor.Color = Color3.new(1, 1, 1);
                 Cursor.Visible = true;
 
@@ -3545,8 +3545,8 @@ function Library:CreateWindow(...)
                     Cursor.Color = Library.AccentColor;
 
                     Cursor.PointA = Vector2.new(mPos.X + 2, mPos.Y + 2);
-                    Cursor.PointB = Vector2.new(mPos.X + 14, mPos.Y + 4);
-                    Cursor.PointC = Vector2.new(mPos.X + 4, mPos.Y + 14);
+                    Cursor.PointB = Vector2.new(mPos.X + 13.5, mPos.Y + 6);
+                    Cursor.PointC = Vector2.new(mPos.X + 6, mPos.Y + 13.5);
 
                     CursorOutline.PointA = Vector2.new(mPos.X, mPos.Y);
                     CursorOutline.PointB = Vector2.new(mPos.X + 16, mPos.Y + 6);
