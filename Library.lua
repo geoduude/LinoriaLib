@@ -3932,11 +3932,11 @@ function Library:CreateWindow(...)
 					local X, Y = mPos.X, mPos.Y
 					Cursor.Color = Library.AccentColor
 					Cursor.PointA = Vector2.new(X, Y)
-					Cursor.PointB = Vector2.new(X + 16, Y + 6)
-					Cursor.PointC = Vector2.new(X + 6, Y + 16)
-					CursorOutline.PointA = Cursor.PointA
-					CursorOutline.PointB = Cursor.PointB
-					CursorOutline.PointC = Cursor.PointC
+					Cursor.PointB = Vector2.new(X + 13.5, Y + 6)
+					Cursor.PointC = Vector2.new(X + 6, Y + 13.5)
+					CursorOutline.PointA = Vector2.new(X, Y)
+					CursorOutline.PointB = Vector2.new(X + 16, Y + 6)
+					CursorOutline.PointC = Vector2.new(X + 6, Y + 16)
 					if not (Toggled and ScreenGui.Parent and Library.ShowCustomCursor) then
 						InputService.MouseIconEnabled = OldMouseIconState
 						Cursor:Destroy()
