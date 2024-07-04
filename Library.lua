@@ -3916,9 +3916,9 @@ function Library:CreateWindow(...)
 			Outer.Visible = true;
 
 			if Library.ShowCustomCursor and Drawing then
-                local Cursor = Drawing.new('Triangle');
-                Cursor.Thickness = 5;
-                Cursor.Visible = true;
+		                local Cursor = Drawing.new('Triangle');
+		                Cursor.Thickness = 5;
+		                Cursor.Visible = true;
 				local CursorOutline = Drawing.new("Triangle")
 				CursorOutline.Thickness = 1
 				CursorOutline.Filled = false
@@ -3931,7 +3931,7 @@ function Library:CreateWindow(...)
 					local mPos = InputService:GetMouseLocation()
 					local X, Y = mPos.X, mPos.Y
 					Cursor.Color = Library.AccentColor
-					Cursor.PointA = Vector2.new(X, Y)
+					Cursor.PointA = Vector2.new(X + 2, Y + 2)
 					Cursor.PointB = Vector2.new(X + 13.5, Y + 6)
 					Cursor.PointC = Vector2.new(X + 6, Y + 13.5)
 					CursorOutline.PointA = Vector2.new(X, Y)
