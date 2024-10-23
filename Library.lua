@@ -3668,7 +3668,6 @@ function Library:CreateWindow(...)
 				BorderColor3 = Library.OutlineColor;
 				BorderMode = Enum.BorderMode.Inset;
 				Size = UDim2.new(1, 0, 0, 20);
-				Position = UDim2.new(0, 0, 0, 20);
 				ZIndex = 2;
 				Parent = Info.Side == 1 and LeftSide or RightSide;
 			});
@@ -3695,7 +3694,7 @@ function Library:CreateWindow(...)
 			local Highlight = Library:Create('Frame', {
 				BackgroundColor3 = Library.AccentColor;
 				BorderSizePixel = 0;
-				Size = UDim2.new(1, 0, 0, 22);
+				Size = UDim2.new(1, 0, 0, 2);
 				ZIndex = 10;
 				Parent = BoxInner;
 			});
