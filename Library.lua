@@ -3715,7 +3715,7 @@ function Library:CreateWindow(...)
 
 			local TabboxButtons = Library:Create('Frame', {
 				BackgroundTransparency = 1;
-				Position = UDim2.new(0, 0, 0, 20);
+				Position = UDim2.new(0, 0, 0, 22);
 				Size = UDim2.new(1, 0, 0, 18);
 				ZIndex = 5;
 				Parent = BoxInner;
@@ -3768,7 +3768,7 @@ function Library:CreateWindow(...)
 
 				local Container = Library:Create('Frame', {
 					BackgroundTransparency = 1;
-					Position = UDim2.new(0, 4, 0, 40);
+					Position = UDim2.new(0, 4, 0, 42);
 					Size = UDim2.new(1, -4, 1, -20);
 					ZIndex = 1;
 					Visible = false;
@@ -3828,7 +3828,7 @@ function Library:CreateWindow(...)
 						end;
 					end;
 
-					BoxOuter.Size = UDim2.new(1, 0, 0, 40 + Size + 2 + 2);
+					BoxOuter.Size = UDim2.new(1, 0, 0, 42 + Size + 2 + 2);
 				end;
 
 				Button.InputBegan:Connect(function(Input)
