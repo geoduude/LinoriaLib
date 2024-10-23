@@ -3755,7 +3755,7 @@ function Library:CreateWindow(...)
 				local Block = Library:Create('Frame', {
 					BackgroundColor3 = Library.BackgroundColor;
 					BorderSizePixel = 0;
-					Position = UDim2.new(0, 0, 1, 20);
+					Position = UDim2.new(0, 0, 1, 40);
 					Size = UDim2.new(1, 0, 0, 1);
 					Visible = false;
 					ZIndex = 9;
@@ -3768,7 +3768,7 @@ function Library:CreateWindow(...)
 
 				local Container = Library:Create('Frame', {
 					BackgroundTransparency = 1;
-					Position = UDim2.new(0, 4, 0, 40);
+					Position = UDim2.new(0, 4, 0, 20);
 					Size = UDim2.new(1, -4, 1, -20);
 					ZIndex = 1;
 					Visible = false;
