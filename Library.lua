@@ -3828,7 +3828,7 @@ function Library:CreateWindow(...)
 						end;
 					end;
 
-					BoxOuter.Size = UDim2.new(1, 0, 0, 20 + Size + 2 + 2);
+					BoxOuter.Size = UDim2.new(1, 0, 0, 40 + Size + 2 + 2);
 				end;
 
 				Button.InputBegan:Connect(function(Input)
