@@ -3668,6 +3668,7 @@ function Library:CreateWindow(...)
 				BorderColor3 = Library.OutlineColor;
 				BorderMode = Enum.BorderMode.Inset;
 				Size = UDim2.new(1, 0, 0, 0);
+				Position = UDim2.new(0, 0, 0, 20);
 				ZIndex = 2;
 				Parent = Info.Side == 1 and LeftSide or RightSide;
 			});
@@ -3682,7 +3683,7 @@ function Library:CreateWindow(...)
 				BorderColor3 = Color3.new(0, 0, 0);
 				-- BorderMode = Enum.BorderMode.Inset;
 				Size = UDim2.new(1, -2, 1, -2);
-				Position = UDim2.new(0, 1, 0, 1);
+				Position = UDim2.new(0, 1, 0, 21);
 				ZIndex = 4;
 				Parent = BoxOuter;
 			});
@@ -3694,7 +3695,7 @@ function Library:CreateWindow(...)
 			local Highlight = Library:Create('Frame', {
 				BackgroundColor3 = Library.AccentColor;
 				BorderSizePixel = 0;
-				Size = UDim2.new(1, 0, 0, 2);
+				Size = UDim2.new(1, 0, 0, 22);
 				ZIndex = 10;
 				Parent = BoxInner;
 			});
@@ -3755,7 +3756,7 @@ function Library:CreateWindow(...)
 				local Block = Library:Create('Frame', {
 					BackgroundColor3 = Library.BackgroundColor;
 					BorderSizePixel = 0;
-					Position = UDim2.new(0, 0, 1, 40);
+					Position = UDim2.new(0, 0, 1, 0);
 					Size = UDim2.new(1, 0, 0, 1);
 					Visible = false;
 					ZIndex = 9;
