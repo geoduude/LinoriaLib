@@ -107,20 +107,19 @@ local function GetPlayersString()
 end;
 
 local function GetOtherPlayersString()
-	local PlayerList = Players:GetPlayers();
+	local Table = {};
+	local Index = 1;
 
-	for i = 1, #PlayerList do
-		if PlayerList[i] == game.Players.LocalPlayer then
-			PlayerList[i] = nil;
-			continue;
-		end
+	for _, Player in Players:GetPlayers() do
+		if Player == game.Players.LocalPlayer then continue end
 
-		PlayerList[i] = PlayerList[i].Name;
+		Table[Index] = Player.Name;
+		Index += 1;
 	end;
 
-	table.sort(PlayerList, function(str1, str2) return str1 < str2 end);
+	table.sort(Table, function(str1, str2) return str1 < str2 end);
 
-	return PlayerList;
+	return Table;
 end;
 
 
