@@ -112,8 +112,7 @@ local function GetOtherPlayersString()
 	for i = 1, #PlayerList do
 		if PlayerList[i] == game.Players.LocalPlayer then
 			PlayerList[i] = nil;
-
-			continue
+			continue;
 		end
 
 		PlayerList[i] = PlayerList[i].Name;
