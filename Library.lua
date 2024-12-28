@@ -106,6 +106,21 @@ local function GetPlayersString()
 	return PlayerList;
 end;
 
+local function GetOtherPlayersString()
+	local PlayerList = Players:GetPlayers();
+
+	for i, Player in PlayerList do
+		if Player == game.Players.LocalPlayer then continue end
+
+		PlayerList[i] = PlayerList[i].Name;
+	end
+
+	table.sort(PlayerList, function(str1, str2) return str1 < str2 end);
+
+	return PlayerList;
+end;
+
+
 local function GetTeamsString()
 	local TeamList = Teams:GetTeams();
 
@@ -2427,6 +2442,9 @@ do
 	function Funcs:AddDropdown(Idx, Info)
 		if Info.SpecialType == 'Player' then
 			Info.Values = GetPlayersString();
+			Info.AllowNull = true;
+		elseif Info.SpecialType == 'Others' then
+			Info.Values = GetOtherPlayersString();
 			Info.AllowNull = true;
 		elseif Info.SpecialType == 'Team' then
 			Info.Values = GetTeamsString();
