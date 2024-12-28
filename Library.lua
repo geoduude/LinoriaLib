@@ -110,6 +110,7 @@ local function GetOtherPlayersString()
 	local PlayerList = Players:GetPlayers();
 
 	for i, Player in PlayerList do
+		print(i)
 		if Player == game.Players.LocalPlayer then continue end
 
 		PlayerList[i] = Player.Name;
@@ -2443,7 +2444,7 @@ do
 		if Info.SpecialType == 'Player' then
 			Info.Values = GetPlayersString();
 			Info.AllowNull = true;
-		elseif Info.SpecialType == 'Others' then
+		elseif Info.SpecialType == 'Other' then
 			Info.Values = GetOtherPlayersString();
 			Info.AllowNull = true;
 		elseif Info.SpecialType == 'Team' then
@@ -2463,7 +2464,7 @@ do
 			Value = Info.Multi and {};
 			Multi = Info.Multi;
 			Type = 'Dropdown';
-			SpecialType = Info.SpecialType; -- can be either 'Player' or 'Team'
+			SpecialType = Info.SpecialType; -- can be either 'Player', 'Other', 'Team'
 			Callback = Info.Callback or function(Value) end;
 		};
 
@@ -4174,7 +4175,7 @@ local function OnPlayerChange()
 	local PlayerList = GetPlayersString();
 
 	for _, Value in next, Options do
-		if Value.Type == 'Dropdown' and Value.SpecialType == 'Player' then
+		if Value.Type == 'Dropdown' and Value.SpecialType == 'Player' or Value.SpecialType == 'Other' then
 			Value:SetValues(PlayerList);
 		end;
 	end;
