@@ -110,6 +110,7 @@ local function GetOtherPlayersString()
 	local PlayerList = Players:GetPlayers();
 
 	for i = 1, #PlayerList do
+		print(PlayerList[i])
 		if PlayerList[i] == game.Players.LocalPlayer then continue end
 
 		PlayerList[i] = PlayerList[i].Name;
