@@ -4171,10 +4171,10 @@ function Library:CreateWindow(...)
 end;
 
 local function OnPlayerChange()
-	local PlayerList = GetPlayersString();
-
 	for _, Value in next, Options do
 		if Value.Type == 'Dropdown' and Value.SpecialType == 'Player' or Value.SpecialType == 'Other' then
+			local PlayerList = Value.SpecialType == 'Player' and GetPlayersString() or GetOtherPlayersString()
+
 			Value:SetValues(PlayerList);
 		end;
 	end;
