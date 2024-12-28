@@ -112,7 +112,7 @@ local function GetOtherPlayersString()
 	for i, Player in PlayerList do
 		if Player == game.Players.LocalPlayer then continue end
 
-		PlayerList[i] = PlayerList[i].Name;
+		PlayerList[i] = Player.Name;
 	end
 
 	table.sort(PlayerList, function(str1, str2) return str1 < str2 end);
